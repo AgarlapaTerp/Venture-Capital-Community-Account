@@ -18,7 +18,7 @@ const Login = () => {
     }
 
   return (
-    <div className='BackgroundContainer'>
+    <div className='LoginBackgroundContainer'>
         <div className='HeaderContainer'>
             <img src="https://logos-world.net/wp-content/uploads/2021/04/Capital-One-Emblem.jpg" alt="Capital One logo" width="25%" height="100%" />
         </div>
@@ -35,7 +35,7 @@ const Login = () => {
                     <div className='LabelText'>Password</div>
                     <input className='Input' type="password" onChange={passwordHandler} value={password} placeholder="Password"></input>
                 </div>
-                <div className='ButtonContainer'>
+                <div className='LoginButtonContainer'>
                     <button className='SignInButton' onClick={() => 1}>
                         Sign In
                     </button>
