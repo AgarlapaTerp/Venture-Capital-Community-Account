@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Login.css'
-import 'c1logo'
 
 const Login = () => {
     const [username, setUsername] = useState('')
@@ -14,25 +13,33 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
+    const signInHandler = () => {
+        
+    }
+
   return (
     <div className='BackgroundContainer'>
         <div className='HeaderContainer'>
-            <img src="https://logos-world.net/wp-content/uploads/2021/04/Capital-One-Emblem.jpg" alt="Capital One logo" width="5vw" height="5vh"> </img>
+            <img src="https://logos-world.net/wp-content/uploads/2021/04/Capital-One-Emblem.jpg" alt="Capital One logo" width="25%" height="100%" />
         </div>
         <div className='BodyContainer'>
             <div className='SignInContainer'>
-                <div className='SignInHeader'>
+                <div className='SignInHeaderContainer'>
                     Sign in to your account
                 </div>
                 <div className='UserNameContainer'>
                     <div className='LabelText'>Username</div>
-                    <input type="text" onChange={usernameHandler} value={username}></input>
+                    <input className='Input' type="text" onChange={usernameHandler} value={username} placeholder="Username"></input>
                 </div>
                 <div className='PasswordContainer'>
                     <div className='LabelText'>Password</div>
-                    <input type="password" onChange={passwordHandler} value={password}></input>
+                    <input className='Input' type="password" onChange={passwordHandler} value={password} placeholder="Password"></input>
                 </div>
-                <button onClick={() => 1} className='SignInButton' />
+                <div className='ButtonContainer'>
+                    <button className='SignInButton' onClick={() => 1}>
+                        Sign In
+                    </button>
+                </div>
             </div>
         </div>
         <div className='FooterContainer'>
