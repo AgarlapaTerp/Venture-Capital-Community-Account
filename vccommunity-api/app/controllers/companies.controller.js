@@ -5,7 +5,7 @@ const uuid = require("uuid")
 
 // Create and Save a new Company
 exports.create = (req, res) => {
-  // Create a Movie
+  // Create a Company
   const company = {
     id: uuid.v4(),
     username: req.body.username,

@@ -1,12 +1,14 @@
 const db = require("../models");
 const Users = db.users;
 const Op = db.Sequelize.Op;
+const uuid = require("uuid")
+
 
 // Create and Save a new User
 exports.create = (req, res) => {
   // Create a User
   const user = {
-    userId: req.body.userId,
+    userId: uuid.v4(),
     username: req.body.username,
     userPassword: req.body.userPassword,
     firstName: req.body.firstName,
@@ -41,12 +43,3 @@ exports.findOne = (req, res) => {
       });
     });
 };
-
-// // {
-//   "id": "123456",
-//   "username": "testfinal",
-//   "first":"ricardo",
-//   "last":"linares",
-//   "password":"test123",
-//   "currentBalance": 75.69
-// }
