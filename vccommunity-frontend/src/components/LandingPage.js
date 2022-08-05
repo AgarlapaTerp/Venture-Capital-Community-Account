@@ -2,10 +2,15 @@ import React from 'react'
 import {useNavigate} from 'react-router-dom'
 import './LandingPage.css'
 
-const LandingPage = () => {
+const LandingPage = ({setInvestor}) => {
     let navigate = useNavigate();
 
-    const handleClick = () => {
+    const handleClickInvestor = () => {
+        setInvestor(true)
+        navigate("/login", ({replace: true}))
+    }
+
+    const handleClickCompany = () => {
         navigate("/login", ({replace: true}))
     }
 
@@ -17,20 +22,25 @@ const LandingPage = () => {
         </div>
         <div className='RightContainer'>
             <div className='GreyTextBoxContainer'>
-                OUR WEBSITE NAME / TAGLINE / DESCRIPTION 
+                <img
+                    src="https://i.postimg.cc/FKVgtgzg/image-1.png"
+                    alt="VentureTogether"
+                    style={{
+                    height: "100%",
+                    width: "100%"}} 
+                />
             </div>
             <div className='RedContainer'>
                 I am a(n)...
             </div>
             <div className='ButtonContainer'>
-                <button onClick={handleClick} className='Button'>
+                <button onClick={handleClickInvestor} className='Button'>
                     Potential Investor
                 </button>
-                <button onClick={handleClick} className='Button'>
+                <button onClick={handleClickCompany} className='Button'>
                     Small Business Owner
                 </button>
             </div>
-
         </div>
     </div>
   )

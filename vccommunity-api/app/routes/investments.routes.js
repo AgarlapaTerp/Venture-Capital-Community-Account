@@ -4,9 +4,9 @@ module.exports = app => {
     // Create a new investment
     router.post("/", investments.create);
     // Retrieve all investments received by company 
-    router.get("/:companyId", tutorials.findAllByCompany);
+    router.get("/:companyId", investments.findAllByCompany);
      // Retrieve all investments by user 
-     router.get("/:investorId", tutorials.findAllByUSer);
+     router.get("/:investorId", investments.findAllByUser);
     
-    app.use('/api/tutorials', router);
+    app.use('/api/investments', router);
   };

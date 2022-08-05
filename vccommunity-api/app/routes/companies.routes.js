@@ -6,9 +6,9 @@ module.exports = app => {
     // Retrieve all companies
     router.get("/", companies.findAll);
     // Retrieve a single company with id
-    router.get("/:id", tutorials.findOneById);
+    router.get("/:id", companies.findOneById);
     // Retrieve a single company with companyname
-    router.get("/:companyName", tutorials.findOneByName);
+    router.get("/:companyName", companies.findOneByName);
     
-    app.use('/api/tutorials', router);
+    app.use('/api/companies', router);
   };

@@ -5,5 +5,5 @@ module.exports = app => {
     router.post("/", users.create);
     // Retrieve a single User with id
     router.get("/:id", users.findOne);
-    app.use('/api/tutorials', router);
+    app.use('/api/users', router);
   };

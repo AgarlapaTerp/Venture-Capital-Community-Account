@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css';
+import {useNavigate} from 'react-router-dom'
 
-const Login = () => {
+const Login = ({investor}) => {
+    let navigate = useNavigate();
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -14,6 +17,14 @@ const Login = () => {
     }
 
     const signInHandler = () => {
+        if (investor) {
+            //navigate this to investor dashboard
+            navigate("/userdashboard", ({replace: true}))
+        }
+        else {
+            //navigate to company dashboard
+            navigate("/", ({replace: true}))
+        }
         
     }
 
@@ -36,14 +47,14 @@ const Login = () => {
                     <input className='Input' type="password" onChange={passwordHandler} value={password} placeholder="Password"></input>
                 </div>
                 <div className='LoginButtonContainer'>
-                    <button className='SignInButton' onClick={() => 1}>
+                    <button className='SignInButton' onClick={signInHandler}>
                         Sign In
                     </button>
                 </div>
             </div>
         </div>
         <div className='FooterContainer'>
-            *Insert our own logo / tagline here*
+           Venture Together - Funding the Future
         </div>
     </div>
   )

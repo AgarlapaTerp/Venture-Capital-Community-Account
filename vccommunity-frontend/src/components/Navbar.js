@@ -4,38 +4,31 @@ import {
   NavLink,
   Bars,
   NavMenu,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarElements";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/landing">
+        <NavLink to="/">
           <img
-            src="vccommunity-frontend/public/ventureTogetherjpg.png"
+            src="https://i.postimg.cc/FKVgtgzg/image-1.png"
             alt="VentureTogether"
             style={{
-              maxHeight: "80%",
-              maxWidth: "80%",
+              height: "100%",
+              width: "80%",
             }}
           ></img>
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to="/login">
-            Login
+          <NavLink to="/userdashboard">
+            Dashboard
           </NavLink>
-          <NavLink to="/login">
-            Login
+          <NavLink to="/marketplace">
+            Market Place
           </NavLink>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/login">
-            TODO
-          </NavBtnLink>
-        </NavBtn>
       </Nav>
     </>
   );
