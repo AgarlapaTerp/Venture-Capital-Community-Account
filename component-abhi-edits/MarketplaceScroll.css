@@ -1,0 +1,16 @@
+.scroll {
+    width: 75vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
