@@ -16,14 +16,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.users = require("./users.model.js")(sequelize, Sequelize);
-    // columns: uuid(automatic), username, password, first, last, currentBalance
 db.companies = require("./companies.model.js")(sequelize, Sequelize);
-    // columns: uuid(automatic), company name, username, password, 
-db.userInvestments = require("./userInvestments.model.js")(sequelize, Sequelize);
-    // columns: uuid(automatic), userId, investmentAmount, companyId
-db.companyFunding = require("./companyFunding.model.js")(sequelize, Sequelize);
-    // columns: uuid(automatic), investmentAmount, userId, date
-
-
+db.investments = require("./investments.model.js")(sequelize, Sequelize);
 
 module.exports = db;
