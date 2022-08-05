@@ -5,6 +5,7 @@ import Login from './components/Login';
 import LandingPage from './components/LandingPage';
 import UserDashboard from './components/UserDashboard';
 import Marketplace from './components/Marketplace';
+import CompanyDashboard from './components/CompanyDashboard';
 
 function App() {
   const [investor, setInvestor] = useState(false)
@@ -17,6 +18,8 @@ function App() {
           <Route path="/login" exact element={<Login investor={investor}/>} />
           <Route path="/userdashboard" exact element={<UserDashboard/>} />
           <Route path="/marketplace" exact element={<Marketplace/>} />
+          <Route path="/companydashboard" exact element={<CompanyDashboard/>} />
+
         </Routes>
       </Router>
     </div>

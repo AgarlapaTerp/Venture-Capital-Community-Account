@@ -23,7 +23,7 @@ const Login = ({investor}) => {
         }
         else {
             //navigate to company dashboard
-            navigate("/", ({replace: true}))
+            navigate("/companydashboard", ({replace: true}))
         }
         
     }
